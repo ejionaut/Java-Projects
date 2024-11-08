@@ -1,7 +1,7 @@
 # Project : Basic Calculator ★
 
 ## Project Image:
-    ![Calculator](/res/BasicCalculator.png)
+![Calculator](./res/BasicCalculator.png)
 
 ## Project Description:
     A basic calculator that does the simple mathematical equations ( + - / * ).
