@@ -5,12 +5,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="852.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="../controller/LoginController">
+<VBox prefHeight="852.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.LoginController">
    <children>
       <ImageView fitHeight="279.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true" />
       <TextArea fx:id="userTextField" prefHeight="32.0" prefWidth="393.0" text="Username" />
       <TextArea fx:id="passwordTextField" prefHeight="32.0" prefWidth="393.0" text="Password" />
-      <Button fx:id="loginButton" mnemonicParsing="false" text="Login" />
+      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" text="Login" />
       <Button fx:id="registerButton" mnemonicParsing="false" text="Register" />
    </children>
 </VBox>
