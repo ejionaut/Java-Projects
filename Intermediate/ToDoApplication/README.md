@@ -1,7 +1,7 @@
 # Project : To Do Application ★★★
 
 ## Project Figma Image:
-![To Do App Mockup](./data/img/FigmaProject.png)
+![To Do App Mockup](src/data/img/FigmaProject.png)
 
 Figma File: 
 [Figma File Link](https://www.figma.com/design/HJkOP0N7lihwcko0P3An01/Untitled?node-id=0-1&t=xQYQ37heNnIHuzdb-1)
