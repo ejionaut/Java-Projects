@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="852.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="73.0" prefWidth="393.0">
+         <children>
+            <Button mnemonicParsing="false" text="Logout" />
+         </children>
+      </HBox>
+      <TextField />
+      <DatePicker prefHeight="25.0" prefWidth="363.0" />
+      <MenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="363.0" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <TextArea prefHeight="200.0" prefWidth="200.0" />
+      <Button mnemonicParsing="false" text="Create New Task" />
+      <Button mnemonicParsing="false" text="Cancel" />
+   </children>
+</VBox>

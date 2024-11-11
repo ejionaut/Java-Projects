@@ -1,0 +1,19 @@
+<Storage>
+    <slot>
+        <user>Jayzster<user>
+        <tasks>
+            <task1>
+                <title>I have to do this segment</title>
+                <date>March 14,2024</date>
+                <importance>important</importance>
+                <description>This is an important task that I have to do once I get home</description>
+            <task1>
+            <task2>
+                <title>I have to do this segment</title>
+                <date>March 14,2024</date>
+                <importance>important</importance>
+                <description>This is an important task that I have to do once I get home</description>
+            <task1>
+        </tasks>
+    </slot>
+</Storage>
