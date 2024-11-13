@@ -31,6 +31,9 @@ public class ViewTasksController {
     public void initialize(){
         UserManagement usermanagement = UserManagement.getInstance();
         currAccount = usermanagement.getAccount();
+
+        Bridge bridge = new Bridge();
+        bridge.displayAllTasks(currAccount.getTask(), taskStorage);
     }
 
     @FXML

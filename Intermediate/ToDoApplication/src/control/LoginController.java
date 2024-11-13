@@ -5,12 +5,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 public class LoginController {
     @FXML
-    private TextArea errorPrompt;
+    private Label errorPrompt;
     @FXML
     private TextArea userTextField;
     @FXML
@@ -30,7 +31,7 @@ public class LoginController {
 
     @FXML
     private void initialize(){
-
+        errorPrompt.setVisible(false);
     }
 
     @FXML
@@ -41,9 +42,6 @@ public class LoginController {
         try {
             if(bridge.getMatchingAccount(username,password, errorPrompt)){
                 Stage stage = (Stage) loginButton.getScene().getWindow();
-
-                
-
                 SceneSwitcher sceneSwitcher = new SceneSwitcher();
                 sceneSwitcher.swap(stage.getScene(), "landing");
             }
@@ -95,11 +93,11 @@ public class LoginController {
         this.registerButton = registerButton;
     }
 
-    public TextArea getErrorPrompt() {
+    public Label getErrorPrompt() {
         return errorPrompt;
     }
 
-    public void setErrorPrompt(TextArea errorPrompt) {
+    public void setErrorPrompt(Label errorPrompt) {
         this.errorPrompt = errorPrompt;
     }
 }

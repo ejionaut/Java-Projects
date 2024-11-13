@@ -3,20 +3,22 @@ package control;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Locale;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -32,7 +34,7 @@ import org.xml.sax.SAXException;
 
 public class Bridge {
 
-    public Boolean getMatchingAccount(String user, String password, TextArea error) throws Exception{
+    public Boolean getMatchingAccount(String user, String password, Label error) throws Exception{
 
         File xmlAccounts = new File("src\\data\\Accounts.xml");
 
@@ -56,9 +58,11 @@ public class Bridge {
                     return true;
                 } else {
                     error.setText("Wrong Password");
+                    error.setVisible(true);
                 }
             } else {
                 error.setText("User Does not Exist");
+                error.setVisible(true);
             }
         }
 
@@ -87,8 +91,7 @@ public class Bridge {
                     Element t = (Element) elem.getElementsByTagName("task").item(y);
                     
                     String date =  t.getElementsByTagName("date").item(0).getTextContent();
-                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH);
-                    LocalDate dateOfEvent = LocalDate.parse(date,formatter);
+                    LocalDate dateOfEvent = LocalDate.parse(date);
 
                     String importance = t.getElementsByTagName("importance").item(0).getTextContent();
                     String desc = t.getElementsByTagName("description").item(0).getTextContent();
@@ -145,7 +148,6 @@ public class Bridge {
 
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         DOMSource source = new DOMSource(document);
         StreamResult result = new StreamResult(new File("src\\data\\Accounts.xml"));
         transformer.transform(source, result);
@@ -202,7 +204,6 @@ public class Bridge {
         }
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         DOMSource source = new DOMSource(document);
         StreamResult result = new StreamResult(new File("src\\data\\Tasks.xml"));
         transformer.transform(source, result);
@@ -278,7 +279,6 @@ public class Bridge {
         
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         DOMSource source = new DOMSource(document);
         StreamResult result = new StreamResult(new File("src\\data\\Tasks.xml"));
         transformer.transform(source, result);
@@ -303,8 +303,29 @@ public class Bridge {
 
             for(int x = 0; x < max; x++){
                 HBox hBox = new HBox();
-                hBox.setMinHeight(100);
+                hBox.setMinHeight(80);
                 hBox.setMinWidth(200);
+
+                switch (x) {
+                    case 0 -> {
+                        hBox.setStyle("-fx-background-color: #fdfdff;");
+                        hBox.setOpacity(1);
+                    }
+                    case 1 -> {
+                        hBox.setStyle("-fx-background-color: #f1f1f1;");
+                        hBox.setOpacity(0.8);
+                    }
+                    default -> {
+                        hBox.setStyle("-fx-background-color: #e0e0e0;");
+                        hBox.setOpacity(0.5);
+                    }
+                }
+
+                String test = hBox.getStyle() + "-fx-margin: 5px;";
+                hBox.setStyle(test);
+
+                hBox.setAlignment(Pos.CENTER_LEFT);
+                hBox.setPadding(new Insets(10));
 
                 Circle circle = new Circle();
                 circle.setRadius(15);
@@ -330,14 +351,20 @@ public class Bridge {
                 }
                 hBox.getChildren().add(circle);
 
+                
+
                 VBox vBox = new VBox();
                 vBox.setMinHeight(100);
                 vBox.setMinWidth(157);
 
-                TextField title = new TextField();
-                title.setText(tasks.get(x).getTitle());
+                vBox.setAlignment(Pos.CENTER_LEFT);
 
-                TextField date = new TextField();
+
+                Label title = new Label();
+                title.setText(tasks.get(x).getTitle());
+                title.setFont(new Font(20));
+
+                Label date = new Label();
                 date.setText(String.valueOf(tasks.get(x).getDate()));
 
                 vBox.getChildren().add(title);
@@ -349,5 +376,68 @@ public class Bridge {
         }
     }
 
+    // Method for View Tasks
+    public void displayAllTasks(ArrayList<Task> tasks, VBox storage){
+        if(tasks.isEmpty()){
+            Label label = new Label("No Tasks");
+            storage.getChildren().add(label);
+        } else {
+            for(Task task : tasks){
+                VBox mainSlotBox = new VBox();
+                mainSlotBox.setMinHeight(227);
+                mainSlotBox.setMinWidth(390);
+                
+                HBox topHeaderBox = new HBox();
+                topHeaderBox.setMinHeight(50);
+                topHeaderBox.setMinWidth(390);
 
+                TextArea descTextArea = new TextArea();
+                descTextArea.setMinHeight(126);
+                descTextArea.setMinWidth(390);
+                descTextArea.setEditable(false);
+                descTextArea.setText(task.getDescription());
+
+                HBox buttonBox = new HBox();
+                buttonBox.setMinHeight(39);
+                buttonBox.setMinWidth(390);
+
+                VBox innerVBox = new VBox();
+                innerVBox.setMinHeight(50);
+                innerVBox.setMinWidth(231);
+
+                TextField dateField = new TextField();
+                dateField.setEditable(false);
+                dateField.setText(String.valueOf(task.getDate()));
+
+                TextField titleField = new TextField();
+                titleField.setEditable(false);
+                titleField.setText(task.getTitle());
+
+                TextField importanceField = new TextField();
+                importanceField.setEditable(false);
+                importanceField.setText(task.getImportance());
+
+                Button editBtn = new Button();
+                editBtn.setText("Edit");
+
+                Button deleteBtn = new Button();
+                editBtn.setText("Delete");
+
+                innerVBox.getChildren().add(titleField);
+                innerVBox.getChildren().add(importanceField);
+
+                topHeaderBox.getChildren().add(innerVBox);
+                topHeaderBox.getChildren().add(dateField);
+
+                buttonBox.getChildren().add(editBtn);
+                buttonBox.getChildren().add(deleteBtn);
+
+                mainSlotBox.getChildren().add(topHeaderBox);
+                mainSlotBox.getChildren().add(descTextArea);
+                mainSlotBox.getChildren().add(buttonBox);
+
+                storage.getChildren().add(mainSlotBox);
+            }
+        }
+    }
 }

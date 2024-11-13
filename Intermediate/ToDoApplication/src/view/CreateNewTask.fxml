@@ -1,34 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:controller="control.CreateTaskController" prefHeight="852.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="852.0" prefWidth="393.0" styleClass="mainBackgroundColor" stylesheets="/data/css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CreateTaskController">
    <children>
-      <HBox prefHeight="73.0" prefWidth="393.0">
+      <HBox alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="393.0">
          <children>
-            <Button fx:id="logoutBtn" onAction="#logout" mnemonicParsing="false" text="Logout" />
+            <ImageView fitHeight="117.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/data/img/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="150.0" />
+               </HBox.margin>
+            </ImageView>
+            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #472C51;" text="Logout" textFill="WHITE" />
          </children>
       </HBox>
-      <TextArea fx:id="errorPrompt" editable="false" prefHeight="32.0" prefWidth="393.0" />
-      <TextArea fx:id="titleTextField" prefHeight="32.0" prefWidth="393.0" text="Title" />
-      <DatePicker fx:id="datePickField" prefHeight="25.0" prefWidth="363.0" />
-      <MenuButton fx:id="importancePickField" mnemonicParsing="false" prefHeight="25.0" prefWidth="363.0" text="MenuButton">
+      <TextArea fx:id="errorPrompt" editable="false" opacity="0.79" prefHeight="32.0" prefWidth="393.0" visible="false" />
+      <TextArea fx:id="titleTextField" prefHeight="32.0" prefWidth="393.0" promptText="Title">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></TextArea>
+      <DatePicker fx:id="datePickField" prefHeight="35.0" prefWidth="353.0" promptText="Pick a day!">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></DatePicker>
+      <MenuButton fx:id="importancePickField" mnemonicParsing="false" prefHeight="36.0" prefWidth="353.0">
         <items>
           <MenuItem mnemonicParsing="false" text="Important" />
           <MenuItem mnemonicParsing="false" text="Average" />
           <MenuItem mnemonicParsing="false" text="Low" />
           <MenuItem mnemonicParsing="false" text="Default" />
         </items>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
       </MenuButton>
-      <TextArea fx:id="descriptionBox" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="createTaskBtn" onAction="#createAcc" mnemonicParsing="false" text="Create New Task" />
-      <Button fx:id="cancelBtn" onAction="#cancel" mnemonicParsing="false" text="Cancel" />
+      <TextArea fx:id="descriptionBox" prefHeight="200.0" prefWidth="200.0" promptText="Description">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></TextArea>
+      <Button fx:id="createTaskBtn" mnemonicParsing="false" onAction="#createAcc" prefHeight="43.0" prefWidth="205.0" style="-fx-background-color: #472C51;" text="Create New Task" textFill="WHITE">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
+      <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancel" prefHeight="42.0" prefWidth="207.0" style="-fx-background-color: #472C51;" text="Cancel" textFill="WHITE">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin></Button>
    </children>
 </VBox>

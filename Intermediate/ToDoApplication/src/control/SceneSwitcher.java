@@ -20,14 +20,11 @@ public class SceneSwitcher {
             case "login":
                 fxmlLoginView += "LoginView.fxml";
                 break;
-            case "edit":
-                fxmlLoginView += "EditTask.fxml";
-                break;
             case "create":
                 fxmlLoginView += "CreateNewTask.fxml";
                 break;
             case "view":
-                fxmlLoginView += "CreateNewTask.fxml";
+                fxmlLoginView += "ViewTasks.fxml";
                 break;
                 
         }

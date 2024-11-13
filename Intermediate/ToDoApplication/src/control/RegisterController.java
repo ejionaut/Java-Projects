@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import javax.xml.parsers.ParserConfigurationException;
@@ -19,7 +20,7 @@ public class RegisterController {
     @FXML
     private TextArea cpasswordTextField;
     @FXML
-    private TextArea errorPrompt;
+    private Label errorPrompt;
     @FXML
     private Button createBtn;
     @FXML
@@ -35,9 +36,11 @@ public class RegisterController {
 
         if(!passwordTextField.getText().equals(cpasswordTextField.getText())){
             errorPrompt.setText("Password Does Not Match");
+            errorPrompt.setVisible(true);
         } else {
             if(bridge.checkUser(userTextField.getText())){
                 errorPrompt.setText("User Already Exists");
+                errorPrompt.setVisible(true);
             } else{
                 bridge.writeToFileAccounts(userTextField.getText(), passwordTextField.getText(), null);
                 returnLogin();

@@ -1,0 +1,6 @@
+
+.mainBackgroundColor{
+    -fx-background-color: linear-gradient(to bottom, rgb(85, 64, 104) 42%, rgba(176,118,198,1) 100%);
+    -fx-padding: 20;
+}
+

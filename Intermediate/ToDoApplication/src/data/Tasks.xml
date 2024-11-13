@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Storage>
-                        
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Storage>
+                                                            
     
     
     
@@ -8,171 +7,594 @@
 
     
 
-    <slot>
-                                                
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+                            
+
+
+
+
+
+
+<slot>
+                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
         
         <user>Jayzster</user>
-                                                
+                                                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
         
         <tasks>
-                                                                        
+                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
             
             <task>
-                                                                                                
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <title>I have to do this segment</title>
-                                                                                                
+                                                                                                                                                                                                                                                
                 
                 
                 
                 
-                <date>March 14, 2024</date>
-                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <date>2024-03-11</date>
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <importance>important</importance>
-                                                                                                
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <description>This is an important task that I have to do once I get home</description>
-                                                                                            
+                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
             
             </task>
-                                                                        
+                                                                                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
             
             <task>
-                                                                                                
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <title>I have to do this segment</title>
-                                                                                                
+                                                                                                                                                                                                                                                
                 
                 
                 
                 
-                <date>March 14, 2024</date>
-                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <date>2024-03-14</date>
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <importance>ok</importance>
-                                                                                                
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <description>This is an important task that I have to do once I get home</description>
-                                                                                            
+                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
             
             </task>
-                                                
+                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             <task>
-                                                                                                
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <title>I have to do this segment</title>
-                                                                                                
+                                                                                                                                                                                                                                                
                 
                 
                 
                 
-                <date>March 14, 2024</date>
-                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <date>2024-03-14</date>
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <importance>normal</importance>
-                                                                                                
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <description>This is an important task that I have to do once I get home</description>
-                                                                                            
+                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
             
             </task>
-                                                
+                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             <task>
-                                                                                                
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <title>I have to do this segment</title>
-                                                                                                
+                                                                                                                                                                                                                                                
                 
                 
                 
                 
-                <date>March 11, 2024</date>
-                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <date>2024-03-14</date>
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <importance>low</importance>
-                                                                                                
+                                                                                                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
                 
                 <description>This is an important task that I have to do once I get home</description>
-                                                                                            
+                                                                                                                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
             
             </task>
-                                                                    
+                                                                                                                                                                                
         
         
         
         
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <task>
+                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
                 <title>Title</title>
+                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
                 <date>2024-11-08</date>
+                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
                 <importance>MenuButton</importance>
+                                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                
                 <description>12312</description>
-            </task>
-        </tasks>
+                                                                                                                                                            
             
-    </slot>
-</Storage>
+            
+            
+            
+            
+            
+            
+            
+            </task>
+                                                                                                                    
+            
+            
+            
+            
+            
+            
+            
+            
+            <task>
+                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                <title>Title</title>
+                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                <date>2024-11-20</date>
+                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                <importance>MenuButton</importance>
+                                                                                                                                                
+                
+                
+                
+                
+                
+                
+                
+                <description>12312</description>
+                                                                                                                                            
+            
+            
+            
+            
+            
+            
+            
+            </task>
+                                                                                                        
+            
+            
+            
+            
+            
+            
+            
+            <task>
+                                                                                                                                
+                
+                
+                
+                
+                
+                
+                <title>THIS NEEDS</title>
+                                                                                                                                
+                
+                
+                
+                
+                
+                
+                <date>2024-11-29</date>
+                                                                                                                                
+                
+                
+                
+                
+                
+                
+                <importance>MenuButton</importance>
+                                                                                                                                
+                
+                
+                
+                
+                
+                
+                <description>ad</description>
+                                                                                                                            
+            
+            
+            
+            
+            
+            
+            </task>
+                                                                                            
+        
+        
+        
+        
+        
+        
+        <task><title>Title</title><date>2024-11-14</date><importance>MenuButton</importance><description>asda</description></task></tasks>
+                                                            
+    
+    
+    
+    
+    
+    
+    </slot></Storage>

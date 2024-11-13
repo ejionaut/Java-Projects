@@ -1,25 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:controller="control.MainLandingPageController" prefHeight="852.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="852.0" prefWidth="393.0" styleClass="mainBackgroundColor" stylesheets="/data/css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainLandingPageController">
    <children>
-      <HBox prefHeight="73.0" prefWidth="393.0">
+      <HBox alignment="TOP_CENTER" prefHeight="73.0" prefWidth="393.0">
          <children>
-            <Button fx:id="logoutBtn" mnemonicParsing="false" text="Logout" />
+            <ImageView fitHeight="100.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/data/img/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="150.0" />
+               </HBox.margin>
+            </ImageView>
+            <Button fx:id="logoutBtn" onAction="#logout" mnemonicParsing="false" prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #472C51;" text="Logout" textFill="WHITE">
+               <HBox.margin>
+                  <Insets top="36.0" />
+               </HBox.margin></Button>
          </children>
       </HBox>
-      <TextArea fx:id="calendarArea" prefHeight="200.0" prefWidth="200.0" />
-      <ScrollPane prefHeight="200.0" prefWidth="200.0">
-         <content>
-            <VBox fx:id="textStorage" prefHeight="196.0" prefWidth="377.0" />
-         </content>
-      </ScrollPane>
-      <Button fx:id="createTask" onAction="#createTask" mnemonicParsing="false" text="Create New Task" />
-      <Button fx:id="viewTask" onAction="#viewTask" mnemonicParsing="false" text="View All Tasks" />
+      <TextArea fx:id="calendarArea" prefHeight="219.0" prefWidth="353.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></TextArea>
+      <VBox fx:id="textStorage" prefHeight="329.0" prefWidth="353.0" >
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></VBox>
+      <Button fx:id="createTask" mnemonicParsing="false" onAction="#createTask" prefHeight="42.0" prefWidth="206.0" style="-fx-background-color: #472C51;" text="Create New Task" textFill="WHITE">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
+      <Button fx:id="viewTask" mnemonicParsing="false" onAction="#viewTask" prefHeight="38.0" prefWidth="206.0" style="-fx-background-color: #472C51;" text="View All Tasks" textFill="WHITE">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin></Button>
    </children>
 </VBox>

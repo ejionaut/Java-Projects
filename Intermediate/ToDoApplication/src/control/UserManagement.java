@@ -1,10 +1,12 @@
 package control;
 
 import model.Accounts;
+import model.Task;
 
 public class UserManagement {
     private Accounts account;
     private final static UserManagement INSTANCE = new UserManagement();
+    private Task task;
 
     private UserManagement(){}
 
@@ -19,4 +21,13 @@ public class UserManagement {
     public Accounts getAccount(){
         return this.account;
     }
+
+    public Task getTask() {
+        return task;
+    }
+
+    public void setTask(Task task) {
+        this.task = task;
+    }
+
 }
