@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="852.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="control.MainLandingPageController" prefHeight="852.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="73.0" prefWidth="393.0">
          <children>
-            <Button mnemonicParsing="false" text="Logout" />
+            <Button fx:id="logoutBtn" mnemonicParsing="false" text="Logout" />
          </children>
       </HBox>
-      <TextArea prefHeight="200.0" prefWidth="200.0" />
-      <VBox prefHeight="272.0" prefWidth="393.0">
-         <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0" />
-            <HBox prefHeight="96.0" prefWidth="393.0" />
-         </children>
-      </VBox>
-      <Button mnemonicParsing="false" text="Create New Task" />
-      <Button mnemonicParsing="false" text="View All Tasks" />
+      <TextArea fx:id="calendarArea" prefHeight="200.0" prefWidth="200.0" />
+      <ScrollPane prefHeight="200.0" prefWidth="200.0">
+         <content>
+            <VBox fx:id="textStorage" prefHeight="196.0" prefWidth="377.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="createTask" onAction="#createTask" mnemonicParsing="false" text="Create New Task" />
+      <Button fx:id="viewTask" onAction="#viewTask" mnemonicParsing="false" text="View All Tasks" />
    </children>
 </VBox>

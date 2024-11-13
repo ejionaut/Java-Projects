@@ -1,6 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Accounts>
+                
+    
+    
     <Account>
-        <username>Jayster<username>
-        <password>123<password>
+                                
+        
+        
+        <username>Jayzster</username>
+                                
+        
+        
+        <password>123</password>
+                            
+    
+    
+    </Account>
+                
+    
+    
+    <Account>
+                                
+        
+        
+        <username>Test</username>
+                                
+        
+        
+        <password>123</password>
+                            
+    
+    
     </Account>
 </Accounts>

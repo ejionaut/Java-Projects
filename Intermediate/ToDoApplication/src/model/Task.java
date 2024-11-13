@@ -2,7 +2,7 @@ package model;
 
 import java.time.LocalDate;
 
-public class Task{
+public class Task implements Comparable<Task>{
     String title;
     LocalDate date;
     String importance;
@@ -45,5 +45,16 @@ public class Task{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public int compareTo(Task o) {
+        if(date.isAfter(o.date)){
+            return 1;
+        } else if (date.isEqual(o.date)){
+            return 0;
+        } else {
+            return -1;
+        }
     }
 }
